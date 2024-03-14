@@ -1,10 +1,13 @@
 import './App.css'
+import Input from './components/Input'
+import WeatherData from './components/WeatherData'
 
 function App() {
   return (
-    <>
-      <h1>holis</h1>
-    </>
+    <div className="wrapper">
+      <Input className="input"></Input>
+      <WeatherData className="result"></WeatherData>
+    </div>
   )
 }
 
