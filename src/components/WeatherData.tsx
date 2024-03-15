@@ -10,9 +10,21 @@ export default function WeatherData({ className, weather }: Props) {
   return (
     <div id="weather-data-main" className={className}>
       <div id="indicators">
-        <p>--, undefined</p>
-        <p id="temperature">{Math.floor(weather?.temperature as number)}°C</p>
-        <p>0.0 m/s</p>
+        <p>{`${weather?.city}, ${weather?.state}, ${weather?.country}`}</p>
+        <p id="temperature">
+          {weather?.temperature
+            ? Number.parseFloat(weather.temperature.toFixed(2))
+            : null}
+          °C
+        </p>
+        <p>
+          {weather?.wind?.speed
+            ? Number.parseFloat(
+                ((weather.wind.speed * 60 * 60) / 1000).toFixed(2),
+              )
+            : null}{' '}
+          km/h
+        </p>
       </div>
       <button id="change-units" className="btn secondary">
         Change units
