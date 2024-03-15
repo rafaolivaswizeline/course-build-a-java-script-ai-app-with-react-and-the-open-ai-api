@@ -1,0 +1,29 @@
+#weather-data-main {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 32px;
+}
+
+#weather-data-main > div {
+  flex: 1;
+}
+
+#indicators {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+#indicators > * {
+  flex: 1;
+}
+
+#temperature {
+  font-size: 128px;
+}
+
+#change-units {
+  margin: 20px;
+  width: 200px;
+}
